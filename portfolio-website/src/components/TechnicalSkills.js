@@ -38,6 +38,7 @@ const skills = [
   { name: 'Git/GitHub', level: 80 },
   { name: 'C#', level: 45 },
   { name: 'jQuery', level: 45 },
+  { name: 'Node.Js', level: 45 },
 ];
 
 const TechnicalSkills = () => (

@@ -14,7 +14,6 @@ const ContactSection = styled.section`
 
 const Contact = () => (
   <ContactSection>
-    <h2>Contact Me</h2>
   </ContactSection>
 );
 
