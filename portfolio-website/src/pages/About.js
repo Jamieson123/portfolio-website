@@ -76,6 +76,26 @@ const Image = styled.img`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
+// New Styled Components for Resumes
+const ResumeList = styled.ul`
+  list-style-type: none;
+  padding-left: 0;
+`;
+
+const ResumeItem = styled.li`
+  color: ${({ theme }) => theme.colors.text};
+  margin-bottom: 10px;
+
+  a {
+    color: ${({ theme }) => theme.colors.primary}; // Customize link color
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
+
 const About = () => (
   <AboutSection>
     <LeftColumn>
@@ -100,6 +120,22 @@ const About = () => (
           <EducationItem>Harvard University - Certification, CS50P Programming w Python</EducationItem>
         </EducationList>
       </Box>
+
+      <Box>
+        <SectionTitle>Resumes</SectionTitle>
+        <ResumeList>
+          <ResumeItem>
+            <a href="https://nowlearning.servicenow.com/lxp?id=nl_public&user=jamiesondl425988" target="_blank" rel="noopener noreferrer">
+              View My ServiceNow Resume
+            </a>
+          </ResumeItem>
+          <ResumeItem>
+            <a href="link-to-your-normal-resume.pdf" target="_blank" rel="noopener noreferrer">
+              View My Full Resume
+            </a>
+          </ResumeItem>
+        </ResumeList>
+      </Box>
     </LeftColumn>
 
     <RightColumn>
@@ -117,3 +153,4 @@ const About = () => (
 );
 
 export default About;
+
