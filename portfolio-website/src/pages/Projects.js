@@ -1,11 +1,54 @@
+// src/pages/Projects.js
 import React from 'react';
 import styled from 'styled-components';
-import { FaReact, FaPython, FaHtml5, FaCss3Alt, FaGitAlt, FaNodeJs, FaJsSquare } from 'react-icons/fa';
-import { SiTailwindcss, SiCsharp, SiJquery } from 'react-icons/si';
+import { FaJsSquare, FaReact, FaPython, FaHtml5, FaCss3Alt, FaGithub, FaNodeJs } from 'react-icons/fa';
+import { SiCsharp, SiJquery, SiTailwindcss } from 'react-icons/si';
 
-// Styled Components
+const TechIcons = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+`;
+
+const IconContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+
+  svg {
+    color: ${({ theme }) => theme.colors.primary};
+    font-size: 40px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  span {
+    color: ${({ theme }) => theme.colors.text};
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+
+    svg {
+      color: ${({ theme }) => theme.colors.secondary};  // Change this to your desired hover color
+    }
+
+    span {
+      color: ${({ theme }) => theme.colors.secondary};  // Change this to your desired hover color
+    }
+  }
+`;
+
 const ProjectsSection = styled.section`
   padding: 50px 150px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 `;
 
 const SectionTitle = styled.h2`
@@ -13,80 +56,109 @@ const SectionTitle = styled.h2`
   margin-bottom: 20px;
 `;
 
-const GridContainer = styled.div`
+const ProjectsList = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 `;
 
-const GridItem = styled.div`
+const ProjectCard = styled.div`
   background-color: ${({ theme }) => theme.colors.lightBackground};
   padding: 20px;
   border-radius: 10px;
-  text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  text-align: left;
+  margin-bottom: 20px;
+`;
+
+const ProjectTitle = styled.h3`
+  color: ${({ theme }) => theme.colors.primary};
+  margin-bottom: 10px;
+`;
+
+const ProjectDescription = styled.p`
+  color: ${({ theme }) => theme.colors.text};
+  margin-bottom: 15px;
+`;
+
+const ProjectLink = styled.a`
+  color: ${({ theme }) => theme.colors.primary};
+  text-decoration: none;
+  font-weight: bold;
 
   &:hover {
-    transform: translateY(-5px);
+    text-decoration: underline;
   }
 `;
 
-const GridItemIcon = styled.div`
-  font-size: 3rem;
-  margin-bottom: 10px;
-  color: ${({ theme }) => theme.colors.primary};
-`;
-
-const GridItemLabel = styled.p`
-  color: ${({ theme }) => theme.colors.text};
-`;
-
-// Technologies and Tools Data
-const technologies = [
-  { name: 'JavaScript', icon: <FaJsSquare /> },
-  { name: 'React', icon: <FaReact /> },
-  { name: 'Python', icon: <FaPython /> },
-  { name: 'HTML/CSS', icon: <FaHtml5 />, secondaryIcon: <FaCss3Alt /> }, // Includes both HTML and CSS
-  // { name: 'ServiceNow Platform', icon: <SiServicenow /> }, // Omitted due to missing icon
-  { name: 'Git/GitHub', icon: <FaGitAlt /> },
-  { name: 'C#', icon: <SiCsharp /> },
-  { name: 'jQuery', icon: <SiJquery /> },
-  { name: 'Node.Js', icon: <FaNodeJs /> },
-  { name: 'Tailwind CSS', icon: <SiTailwindcss /> }, // For Tailwind CSS
+const projects = [
+  {
+    title: 'Travel Application',
+    description: 'React-based web application designed to help users discover new destinations.',
+    link: 'https://github.com/Jamieson123/TravelApp',
+  },
+  {
+    title: 'Project 2',
+    description: 'A brief description of Project 2.',
+    link: 'https://github.com/yourusername/project2',
+  },
+  // Add more projects as needed
 ];
 
-// Main Projects Component
 const Projects = () => (
   <ProjectsSection>
     <SectionTitle>Technologies and Tools</SectionTitle>
-    <GridContainer>
-      {technologies.map((tech, index) => (
-        <GridItem key={index}>
-          <GridItemIcon>{tech.icon} {tech.secondaryIcon && tech.secondaryIcon}</GridItemIcon>
-          <GridItemLabel>{tech.name}</GridItemLabel>
-        </GridItem>
-      ))}
-    </GridContainer>
+    <TechIcons>
+      <IconContainer>
+        <FaJsSquare />
+        <span>JavaScript</span>
+      </IconContainer>
+      <IconContainer>
+        <FaReact />
+        <span>React</span>
+      </IconContainer>
+      <IconContainer>
+        <FaPython />
+        <span>Python</span>
+      </IconContainer>
+      <IconContainer>
+        <FaHtml5 />
+        <span>HTML/CSS</span>
+      </IconContainer>
+      <IconContainer>
+        <FaGithub />
+        <span>Git/GitHub</span>
+      </IconContainer>
+      <IconContainer>
+        <SiCsharp />
+        <span>C#</span>
+      </IconContainer>
+      <IconContainer>
+        <SiJquery />
+        <span>jQuery</span>
+      </IconContainer>
+      <IconContainer>
+        <FaNodeJs />
+        <span>Node.Js</span>
+      </IconContainer>
+      <IconContainer>
+        <SiTailwindcss />
+        <span>Tailwind CSS</span>
+      </IconContainer>
+    </TechIcons>
 
     <SectionTitle>My Projects</SectionTitle>
-    <GridContainer>
-      <GridItem>
-        <GridItemLabel>Project 1</GridItemLabel>
-        <GridItemLabel>A brief description of the project.</GridItemLabel>
-        <GridItemLabel>
-          <a href="#!" style={{ color: 'inherit' }}>View Project</a>
-        </GridItemLabel>
-      </GridItem>
-      <GridItem>
-        <GridItemLabel>Project 2</GridItemLabel>
-        <GridItemLabel>A brief description of the project.</GridItemLabel>
-        <GridItemLabel>
-          <a href="#!" style={{ color: 'inherit' }}>View Project</a>
-        </GridItemLabel>
-      </GridItem>
-      {/* Add more project items as needed */}
-    </GridContainer>
+    <ProjectsList>
+      {projects.map((project, index) => (
+        <ProjectCard key={index}>
+          <ProjectTitle>{project.title}</ProjectTitle>
+          <ProjectDescription>{project.description}</ProjectDescription>
+          <ProjectLink href={project.link} target="_blank" rel="noopener noreferrer">
+            View Project
+          </ProjectLink>
+        </ProjectCard>
+      ))}
+    </ProjectsList>
   </ProjectsSection>
 );
 

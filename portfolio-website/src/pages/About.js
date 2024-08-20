@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import TechnicalSkills from '../components/TechnicalSkills';
 import HarvardCert from '../assets/cs50p_certificate.jpg';  // Import the Harvard cert as an image
-import ServiceNowLogo from '../assets/servicenow_logo.jpg';  // Import the ServiceNow logo
+import DeveloperResume from '../assets/developer_resume.pdf';  // Import the Developer resume PDF
 
 // Existing Styled Components
 const AboutSection = styled.section`
@@ -66,13 +66,13 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
 `;
 
 const Image = styled.img`
-  width: 48%;  // Each image will take up about half the container's width
+  width: 69%;  // Each image will take up about half the container's width
   height: auto;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
@@ -130,7 +130,7 @@ const About = () => (
             </a>
           </ResumeItem>
           <ResumeItem>
-            <a href="link-to-your-normal-resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href={DeveloperResume} target="_blank" rel="noopener noreferrer">
               View My Full Resume
             </a>
           </ResumeItem>
@@ -146,11 +146,9 @@ const About = () => (
 
       <ImageContainer>
         <Image src={HarvardCert} alt="Harvard Certification" />
-        <Image src={ServiceNowLogo} alt="ServiceNow Logo" />
       </ImageContainer>
     </RightColumn>
   </AboutSection>
 );
 
 export default About;
-
