@@ -98,9 +98,9 @@ const projects = [
     link: 'https://github.com/Jamieson123/TravelApp',
   },
   {
-    title: 'Project 2',
-    description: 'A brief description of Project 2.',
-    link: 'https://github.com/yourusername/project2',
+    title: 'Job Analysis Tool',
+    description: 'Analyzes employment trends using Python and BLS API data.',
+    link: 'https://github.com/Jamieson123/job_growth_analysis',
   },
   // Add more projects as needed
 ];
