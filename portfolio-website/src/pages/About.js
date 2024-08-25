@@ -100,15 +100,20 @@ const About = () => (
   <AboutSection>
     <LeftColumn>
       <Box>
-        <SectionTitle>About Me</SectionTitle>
+        <SectionTitle>Hello World</SectionTitle>
         <Paragraph>
-          I'm Darell Jamieson, a passionate and results-driven software developer with a strong foundation in key programming languages like HTML, CSS, JavaScript, and Python. My technical expertise spans across popular frameworks such as React and Node.js, honed through hands-on experience and advanced technical training. My journey from military service to tech has provided me with a unique blend of strategic insight and technical know-how, especially in configuring and customizing software solutions like ServiceNow.
+        I am Darell Jamieson, a passionate and results-driven software developer with a robust foundation in key programming languages such as HTML, CSS, JavaScript, and Python. My technical expertise spans popular frameworks like React, developed through hands-on experience, self-taught initiatives, and advanced technical training. My tech journey has provided me with a unique blend of strategic insight and technical know-how, which I apply to solving complex problems and building innovative software solutions.
         </Paragraph>
         <Paragraph>
-          During my time as a ServiceNow Developer, I've successfully developed and deployed over 20 projects, customizing ServiceNow modules and applications, including Incident Management and Change Management. My proficiency in IT Service Management (ITSM), coupled with my ability to implement best practices and automate ITIL processes within ServiceNow, has enabled me to deliver efficient, scalable, and user-friendly solutions.
+        With a strong background in front-end development, I excel at creating efficient, scalable, and user-friendly interfaces. I am skilled at transforming ideas into functional, intuitive user experiences that enhance usability and engagement. In addition to my front-end skills, I am actively expanding my knowledge of back-end technologies, particularly in working with Node.js and C#. This focus is helping me broaden my capabilities to deliver more comprehensive, full-stack solutions.
+        Much of my success stems from my self-motivation and eagerness to learn. 
         </Paragraph>
         <Paragraph>
-          My background in the military as a Senior Intelligence Analyst has further strengthened my leadership, analytical, and communication skills. I've managed teams, led high-stakes initiatives, and conducted in-depth data analysis and reporting, which have all contributed to my effectiveness as a developer. With a solid understanding of Object-Oriented Programming, API integration, and Agile development methodologies, I am committed to continuous learning and innovation in the field of software development.
+        I have built a solid understanding of software development practices and tools through self-directed study and continuous exploration of new technologies. This proactive approach has enabled me to stay ahead of industry trends and continually enhance my skills.
+        Previously, my role as an intelligence analyst equipped me with invaluable leadership, analytical, and communication skills. I have successfully managed teams, led high-stakes initiatives, and performed in-depth data analysis and reporting. These experiences have sharpened my ability to think critically, adapt quickly, and drive projects forward with precision and focus.
+        </Paragraph>
+        <Paragraph>
+        I am committed to continuous learning and staying abreast of emerging technologies and best practices in software development. Whether working independently or as part of a team, I strive to bring innovation, efficiency, and excellence to every project I undertake. I am eager to leverage my skills and experience to contribute to impactful software development initiatives and drive success in dynamic, fast-paced environments.
         </Paragraph>
       </Box>
 
@@ -143,10 +148,7 @@ const About = () => (
         <SectionTitle>Skills & Highlights</SectionTitle>
         <TechnicalSkills />
       </Box>
-
-      <ImageContainer>
-        <Image src={HarvardCert} alt="Harvard Certification" />
-      </ImageContainer>
+    
     </RightColumn>
   </AboutSection>
 );
