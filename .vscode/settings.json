@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/fe8c1e85-b078-4f81-8850-5f5e14ed38cd/resourceGroups/Jamiesonwebsite/providers/Microsoft.Web/sites/JamiesonPortfolio",
+    "appService.deploySubpath": "portfolio-website"
+}
